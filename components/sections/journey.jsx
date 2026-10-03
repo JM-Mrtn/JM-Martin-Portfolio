@@ -1869,55 +1869,15 @@ export function Journey(){
 
 
 
-                const response =
+                const username = site.github?.username || "YOUR_GITHUB_USERNAME";
 
+const response = await fetch(
+    `https://github-contributions-api.jogruber.de/v4/${username}?y=last`
+);
 
-
-
-
-
-
-                    await fetch(
-
-
-
-
-
-
-
-                        `https\\://github-contributions-api.jogruber.de/v4/${site.github.username}?y=last`
-
-
-
-
-
-
-
-                    );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if (!response.ok) {
+    throw new Error("GitHub contribution fetch failed");
+}
 
 
 
@@ -3886,22 +3846,8 @@ INTELLIGENT EXPERIENCES
 
 
                                 <ContributionGraph
-
-
-
-
-
-
-
-                                    contributions={contributions}
-
-
-
-
-
-
-
-                                />
+    contributions={contributions}
+/>
 
 
 
