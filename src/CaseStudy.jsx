@@ -8,7 +8,7 @@ import { CaseShowcase } from "../components/site/case-showcase";
 import { Reveal } from "../components/motion/reveal";
 import { Button } from "../components/ui/button";
 import Link from "../components/compat/link";
-import { getProjectBySlug, projects } from "../lib/portfolio-data";
+import { projects } from "@/lib/projects";
 
 const chapters = [
   { key: "problem", label: "The problem" },

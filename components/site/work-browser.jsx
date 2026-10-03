@@ -14,7 +14,13 @@ const ALL = "All";
 export function WorkBrowser({ projects, categories, }) {
     const [active, setActive] = React.useState(ALL);
     const category = categories.find((c) => c.key === active);
-    const items = sortForDisplay(active === ALL ? projects : projects.filter((p) => p.category === active));
+    const items = sortForDisplay(
+    active === ALL
+        ? projects
+        : projects.filter(
+            (p) => p.category === category?.key
+        )
+);
     const blurb = active === ALL
         ? "Everything, newest categories last — pick a tab to narrow it down."
         : category?.blurb ?? "";

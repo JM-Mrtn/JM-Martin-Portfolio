@@ -11,7 +11,7 @@ import { Journey } from "../components/sections/journey";
 import { Process } from "../components/sections/process";
 import { Testimonials } from "../components/sections/testimonials";
 import { Contact } from "../components/sections/contact";
-import { projects, categories } from "../lib/portfolio-data";
+import { projects, categories } from "@/lib/projects";
 
 export default function Home() {
   return (

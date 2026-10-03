@@ -8,7 +8,7 @@ import { Reveal } from "../components/motion/reveal";
 import { WorkBrowser } from "../components/site/work-browser";
 import { Button } from "../components/ui/button";
 import Link from "../components/compat/link";
-import { projects, categories } from "../lib/portfolio-data";
+import { projects, categories } from "@/lib/projects";
 
 export default function WorkPage() {
   React.useEffect(() => {
